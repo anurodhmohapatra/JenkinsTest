@@ -1,3 +1,5 @@
-def devData = readYaml(file: 'templates/test-template/template.yaml')
-def serviceAccountName = devData.service-account-name
-println "Hello World. ${serviceAccountName}"
+node {
+  def devData = readYaml(file: 'templates/test-template/template.yaml')
+  def serviceAccountName = devData.service-account-name
+  println "Hello World. ${serviceAccountName}"
+}
