@@ -1,1 +1,3 @@
-println "Hello World."
+def devData = readYaml file: 'https://raw.githubusercontent.com/anurodhmohapatra/JenkinsTest/main/templates/test-template/template.yaml' 
+def serviceAccountName = devData.service-account-name
+println "Hello World. ${serviceAccountName}"
