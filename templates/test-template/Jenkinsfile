@@ -1,15 +1,20 @@
 pipeline {
     agent any
-    
+
     stages {
-        stage('Checkout') { 
+        stage('Build') {
             steps {
-                git credentialsId: "${github_creds}" , url: "${github_repo}" 
+                echo 'Building..'
             }
         }
-        stage('Build') { 
+        stage('Test') {
             steps {
-                sh 'mvn -B -DskipTests clean package' 
+                echo 'Testing..'
+            }
+        }
+        stage('Deploy') {
+            steps {
+                echo 'Deploying....'
             }
         }
     }
