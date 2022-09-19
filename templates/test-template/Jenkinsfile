@@ -4,7 +4,7 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                def devData = readYaml file: 'dev.yml' 
+                def devData = readYaml file: 'template.yaml' 
                 def serviceAccountName = devData.service-account-name
                 echo "Building.. ${serviceAccountName}"
             }
