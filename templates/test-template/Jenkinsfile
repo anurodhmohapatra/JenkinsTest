@@ -1,5 +1,7 @@
-node('master') {
-  def devData = readYaml(file: 'templates/test-template/template.yaml')
-  def serviceAccountName = devData.service-account-name
-  println "Hello World. ${serviceAccountName}"
+node {
+  stage('test-file-parameter') {
+        def devData = readYaml(file: 'templates/test-template/template.yaml')
+        def serviceAccountName = devData.service-account-name
+        println "Hello World. ${serviceAccountName}"
+  }
 }
