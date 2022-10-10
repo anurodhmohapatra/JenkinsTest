@@ -3,6 +3,9 @@ node {
 //         def devData = readYaml file: 'templates/test-template/template.yaml'
 //         def serviceAccountName = devData.parameters.name
 //         println "Hello World. ${serviceAccountName}"
+           def value = test
            println "Hello World."
+    println "${value}"
+    println "${test}"
   }
 }
