@@ -1,5 +1,3 @@
-import groovy.io.FileType
-
 node {
   stage('test-file-parameter') {
         def devData = readYaml file: 'templates/test-template/template.yaml'
