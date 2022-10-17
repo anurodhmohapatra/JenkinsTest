@@ -7,6 +7,6 @@ node {
            println "Hello World."
     println "${value}"
     println "${test}"
-    sh "ls -la ${pwd()}"
+    sh "ls"
   }
 }
