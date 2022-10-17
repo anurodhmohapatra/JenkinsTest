@@ -7,6 +7,6 @@ node {
            println "Hello World."
     println "${value}"
     println "${test}"
-    sh script: "ls *.json", returnStdout: true
+   sh "ls -la ${pwd()}"
   }
 }
