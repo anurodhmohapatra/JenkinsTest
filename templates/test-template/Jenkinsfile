@@ -7,8 +7,6 @@ node {
            println "Hello World."
     println "${value}"
     println "${test}"
-    sh "ls *.json > listJsonFiles"
-    def files = readFile( "listJsonFiles" ).split( "\\r?\\n" );
-    sh "rm -f listJsonFiles"
+    sh script: "ls *.json", returnStdout: true
   }
 }
